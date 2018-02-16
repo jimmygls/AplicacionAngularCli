@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { PiepaginaComponent } from './piepagina/piepagina.component';
 import { MenuizquierdoComponent } from './menuizquierdo/menuizquierdo.component';
+import { EstudiantesComponent } from './estudiantes/estudiantes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EncabezadoComponent,
     PiepaginaComponent,
-    MenuizquierdoComponent
+    MenuizquierdoComponent,
+    EstudiantesComponent,
   ],
   imports: [
     BrowserModule,

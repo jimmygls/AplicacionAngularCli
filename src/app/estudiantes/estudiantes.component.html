@@ -1,0 +1,10 @@
+
+ <h2> Listas estudiantes</h2>
+<div [style.padding]="padding ? 40 : 0">
+  <h3>{{titulo}}</h3>
+  <ul>
+    <li *ngFor="let estudiante of  listadeestudiantes()">
+      {{estudiante}}
+    </li>
+  </ul>
+</div>
