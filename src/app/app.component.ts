@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Aprender facil angular';
   launiversidad="la universidad nacional";
+
+  mostrarEstudiante(evento):void{
+    console.log(evento.nombre);
+
+  }
+
 }

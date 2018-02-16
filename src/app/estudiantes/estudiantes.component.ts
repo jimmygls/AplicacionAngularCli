@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { EventEmitter } from '@angular/common/src/facade/async';
 
 @Component({
   selector: 'app-estudiantes',
@@ -7,7 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 export class EstudiantesComponent implements OnInit {
-  @Input() universidad: string;
+  @Input('mi-universidad') universidad: string;
+  @Output() selecionado = new EventEmitter();
   titulo = "lista de estudiantes";
   estudiantes = ['Estudiante uno', 'Estudiante dos', 'Estudiante tres'];
   redondeadas = false;
@@ -25,6 +27,10 @@ export class EstudiantesComponent implements OnInit {
       return ['Estudiante para uno'];
     }
 
+  }
+
+  clickEnEstudiante(evento): void {
+    this.selecionado.emit({ nombre: evento.target.textContent });
   }
 
   constructor() { }

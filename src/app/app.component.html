@@ -2,5 +2,5 @@
   {{title}}
 </h1>
 <div>
-  <app-estudiantes [universidad]="launiversidad" >Cargando</app-estudiantes>
+  <app-estudiantes [mi-universidad]="launiversidad" (selecionado)="mostrarEstudiante($event)" >Cargando</app-estudiantes>
 </div>
